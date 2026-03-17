@@ -25,9 +25,9 @@ Requirements for this migration. Each maps to roadmap phases.
 
 ### Source Code Audit
 
-- [ ] **AUDT-01**: Audit all Node.js API usage in `nx-set-shas.ts` for Node.js 24 compatibility
-- [ ] **AUDT-02**: Audit all Node.js API usage in `tools/pre-commit.ts` for Node.js 24 compatibility
-- [ ] **AUDT-03**: Document audit findings (APIs checked, changes needed, no-change confirmations)
+- [x] **AUDT-01**: Audit all Node.js API usage in `nx-set-shas.ts` for Node.js 24 compatibility
+- [x] **AUDT-02**: Audit all Node.js API usage in `tools/pre-commit.ts` for Node.js 24 compatibility
+- [x] **AUDT-03**: Document audit findings (APIs checked, changes needed, no-change confirmations)
 
 ### Build & Validation
 
@@ -83,9 +83,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | TSCO-02     | Phase 2 | Complete |
 | TYPE-01     | Phase 2 | Complete |
 | TYPE-02     | Phase 2 | Complete |
-| AUDT-01     | Phase 3 | Pending  |
-| AUDT-02     | Phase 3 | Pending  |
-| AUDT-03     | Phase 3 | Pending  |
+| AUDT-01     | Phase 3 | Complete |
+| AUDT-02     | Phase 3 | Complete |
+| AUDT-03     | Phase 3 | Complete |
 | BVAL-01     | Phase 3 | Pending  |
 | BVAL-02     | Phase 1 | Done     |
 | BVAL-03     | Phase 1 | Done     |
