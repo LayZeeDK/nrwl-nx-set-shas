@@ -14,12 +14,13 @@
 
 ## Workflow x Platform Matrix
 
-### Push-triggered (commit `2a0152f`)
+### Push-triggered
 
 | Workflow         | ubuntu-latest | macOS-latest | Windows-latest | Run                                                                                  |
 | ---------------- | :-----------: | :----------: | :------------: | ------------------------------------------------------------------------------------ |
 | Test             |     PASS      |     PASS     |      PASS      | [23192254202](https://github.com/LayZeeDK/nrwl-nx-set-shas/actions/runs/23192254202) |
 | Test Integration |     PASS      |     PASS     |      PASS      | [23192254217](https://github.com/LayZeeDK/nrwl-nx-set-shas/actions/runs/23192254217) |
+| Publish          |     PASS      |      -       |       -        | [23192600890](https://github.com/LayZeeDK/nrwl-nx-set-shas/actions/runs/23192600890) |
 
 ### PR-triggered (PR #1)
 
@@ -27,15 +28,17 @@
 | ---------------- | :-----------: | :----------: | :------------: | ------------------------------------------------------------------------------------ |
 | Test             |     PASS      |     PASS     |      PASS      | [23192260192](https://github.com/LayZeeDK/nrwl-nx-set-shas/actions/runs/23192260192) |
 | Test Integration |     PASS      |     PASS     |      PASS      | [23192260288](https://github.com/LayZeeDK/nrwl-nx-set-shas/actions/runs/23192260288) |
-| Check Formatting |     FAIL      |      -       |       -        | [23192260185](https://github.com/LayZeeDK/nrwl-nx-set-shas/actions/runs/23192260185) |
+| Check Formatting |     PASS      |      -       |       -        | [23192602202](https://github.com/LayZeeDK/nrwl-nx-set-shas/actions/runs/23192602202) |
 
-## Failure Analysis
+## Notes
 
-### Check Formatting (FAIL -- unrelated to Node 24)
+### Publish workflow
 
-Prettier reports formatting issues in 20 `.planning/` markdown files (GSD artifacts). These files are not part of the project source code and are not covered by `.prettierignore`. The failure is **not caused by Node.js 24** or any action changes.
+Publish ran successfully on Node 24 (`FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true`) but was a no-op: "Tag v4.4.0 already exists". The `jameshenry/publish-shell-action@v1` is still on Node 20 (deprecation warning emitted) but functions correctly when forced to Node 24. No newer version exists.
 
-No source code formatting failures were detected.
+### Check Formatting (initial run)
+
+The first PR-triggered Check Formatting run ([23192260185](https://github.com/LayZeeDK/nrwl-nx-set-shas/actions/runs/23192260185)) failed due to unformatted `.planning/` markdown files (GSD artifacts). This was unrelated to Node 24. Resolved by applying Prettier formatting to all `.planning/` files via rebase. Subsequent run passes.
 
 ## NX_BASE / NX_HEAD Verification
 
@@ -53,6 +56,8 @@ All 12 platform x workflow x trigger combinations passed these assertions.
 - All Test and Test Integration workflows pass on all three platforms (ubuntu, macOS, Windows)
 - Both push and PR event triggers work correctly
 - `NX_BASE` and `NX_HEAD` outputs are computed correctly
+- Publish workflow runs successfully on Node 24 (no-op due to existing tag)
+- Check Formatting passes after formatting fixes
 - The `FORCE_JAVASCRIPT_ACTIONS_TO_NODE24` flag successfully forces Node.js 24 runtime
 
 ### Scope Impact on Phases 2-3
