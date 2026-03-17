@@ -82,11 +82,11 @@ Plans:
 2. `dist/nx-set-shas.js` is committed and up to date with source
 3. All fork CI workflows (test, test-integration, format) pass
 4. PR exists against `nrwl/nx-set-shas` with breaking changes and self-hosted runner requirements documented in description
-   **Plans**: TBD
+   **Plans**: 1 plan
 
 Plans:
 
-- [ ] 04-01: Bump version, verify CI, and create upstream PR
+- [ ] 04-01-PLAN.md -- Create clean branch from upstream/main, cherry-pick 4 migration commits, bump version to 5.0.0, verify CI, and open upstream PR
 
 ## Progress
 
