@@ -37,10 +37,10 @@ Requirements for this migration. Each maps to roadmap phases.
 
 ### Version & Release
 
-- [ ] **RLSE-01**: Bump package version from 4.4.0 to 5.0.0
-- [ ] **RLSE-02**: Commit rebuilt `dist/` (repo convention: built output is checked in)
-- [ ] **RLSE-03**: Verify fork CI passes (test, test-integration, format workflows use `./` and `GITHUB_TOKEN` only)
-- [ ] **RLSE-04**: Create PR against upstream `nrwl/nx-set-shas` with breaking changes documented in PR description
+- [x] **RLSE-01**: Bump package version from 4.4.0 to 5.0.0
+- [x] **RLSE-02**: Commit rebuilt `dist/` (repo convention: built output is checked in)
+- [x] **RLSE-03**: Verify fork CI passes (test, test-integration, format workflows use `./` and `GITHUB_TOKEN` only)
+- [x] **RLSE-04**: Create PR against upstream `nrwl/nx-set-shas` with breaking changes documented in PR description
 
 ## v2 Requirements
 
@@ -89,10 +89,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | BVAL-01     | Phase 3 | Complete |
 | BVAL-02     | Phase 1 | Done     |
 | BVAL-03     | Phase 1 | Done     |
-| RLSE-01     | Phase 4 | Pending  |
-| RLSE-02     | Phase 4 | Pending  |
-| RLSE-03     | Phase 4 | Pending  |
-| RLSE-04     | Phase 4 | Pending  |
+| RLSE-01     | Phase 4 | Complete |
+| RLSE-02     | Phase 4 | Complete |
+| RLSE-03     | Phase 4 | Complete |
+| RLSE-04     | Phase 4 | Complete |
 
 **Coverage:**
 
@@ -103,4 +103,4 @@ Which phases cover which requirements. Updated during roadmap creation.
 ---
 
 _Requirements defined: 2026-03-17_
-_Last updated: 2026-03-17 after roadmap creation_
+_Last updated: 2026-03-17 after phase 4 plan 01 completion_

@@ -14,9 +14,9 @@ Migrate the nrwl/nx-set-shas GitHub Action from the deprecated Node.js 20 runtim
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Baseline Validation** - Verify current action behavior on Node.js 24 before making changes
-- [ ] **Phase 2: Configuration and Type System** - Update runtime declaration, type definitions, and toolchain config for Node.js 24
-- [ ] **Phase 3: Source Fixes and Build** - Fix compiler-surfaced issues and rebuild dist/ artifact
-- [ ] **Phase 4: Version Bump and Release PR** - Bump to v5.0.0 and submit PR to upstream
+- [x] **Phase 2: Configuration and Type System** - Update runtime declaration, type definitions, and toolchain config for Node.js 24
+- [x] **Phase 3: Source Fixes and Build** - Fix compiler-surfaced issues and rebuild dist/ artifact
+- [x] **Phase 4: Version Bump and Release PR** - Bump to v5.0.0 and submit PR to upstream
 
 ## Phase Details
 
@@ -50,8 +50,8 @@ Plans:
 
 Plans:
 
-- [ ] 02-01-PLAN.md -- Update runtime declaration (action.yml node24), toolchain config (package.json, tsconfig.json), and remove FORCE flag from all 5 CI workflows
-- [ ] 02-02-PLAN.md -- Bump @types/node to 24.x, update lockfile, and verify tsc --noEmit produces no new errors
+- [x] 02-01-PLAN.md -- Update runtime declaration (action.yml node24), toolchain config (package.json, tsconfig.json), and remove FORCE flag from all 5 CI workflows
+- [x] 02-02-PLAN.md -- Bump @types/node to 24.x, update lockfile, and verify tsc --noEmit produces no new errors
 
 ### Phase 3: Source Fixes and Build
 
@@ -68,8 +68,8 @@ Plans:
 
 Plans:
 
-- [ ] 03-01-PLAN.md -- Audit Node.js 24 API compatibility and upgrade @actions/core to 3.x, @actions/github to 9.x
-- [ ] 03-02-PLAN.md -- Rebuild dist/nx-set-shas.js and verify CI green on all platforms
+- [x] 03-01-PLAN.md -- Audit Node.js 24 API compatibility and upgrade @actions/core to 3.x, @actions/github to 9.x
+- [x] 03-02-PLAN.md -- Rebuild dist/nx-set-shas.js and verify CI green on all platforms
 
 ### Phase 4: Version Bump and Release PR
 
@@ -86,16 +86,16 @@ Plans:
 
 Plans:
 
-- [ ] 04-01-PLAN.md -- Create clean branch from upstream/main, cherry-pick 4 migration commits, bump version to 5.0.0, verify CI, and open upstream PR
+- [x] 04-01-PLAN.md -- Create clean branch from upstream/main, cherry-pick 4 migration commits, bump version to 5.0.0, verify CI, and open upstream PR
 
 ## Progress
 
 **Execution Order:**
 Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 
-| Phase                            | Plans Complete | Status      | Completed  |
-| -------------------------------- | -------------- | ----------- | ---------- |
-| 1. Baseline Validation           | 1/1            | Complete    | 2026-03-17 |
-| 2. Configuration and Type System | 1/2            | In Progress |            |
-| 3. Source Fixes and Build        | 1/2            | In Progress |            |
-| 4. Version Bump and Release PR   | 0/1            | Not started | -          |
+| Phase                            | Plans Complete | Status   | Completed  |
+| -------------------------------- | -------------- | -------- | ---------- |
+| 1. Baseline Validation           | 1/1            | Complete | 2026-03-17 |
+| 2. Configuration and Type System | 2/2            | Complete | 2026-03-17 |
+| 3. Source Fixes and Build        | 2/2            | Complete | 2026-03-17 |
+| 4. Version Bump and Release PR   | 1/1            | Complete | 2026-03-17 |
