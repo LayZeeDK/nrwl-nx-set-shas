@@ -64,12 +64,12 @@ Plans:
 2. `tsc --noEmit` passes with zero errors on `@types/node` 24.x
 3. `bun run build` produces a fresh `dist/nx-set-shas.js` that reflects all source changes
 4. CI tests pass on Node.js 24 runtime
-   **Plans**: TBD
+   **Plans**: 2 plans
 
 Plans:
 
-- [ ] 03-01: Audit and fix source code for Node.js 24 compatibility
-- [ ] 03-02: Rebuild dist/ and validate CI
+- [ ] 03-01-PLAN.md -- Audit Node.js 24 API compatibility and upgrade @actions/core to 3.x, @actions/github to 9.x
+- [ ] 03-02-PLAN.md -- Rebuild dist/nx-set-shas.js and verify CI green on all platforms
 
 ### Phase 4: Version Bump and Release PR
 
