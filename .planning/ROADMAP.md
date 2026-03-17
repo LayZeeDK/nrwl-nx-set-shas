@@ -29,11 +29,11 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 1. CI test workflow runs with `FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true` and results are recorded
 2. Baseline pass/fail status is documented so Phase 2-3 scope is informed by evidence, not assumptions
-   **Plans**: TBD
+   **Plans**: 1 plan
 
 Plans:
 
-- [ ] 01-01: Add FORCE_JAVASCRIPT_ACTIONS_TO_NODE24 to CI and run baseline
+- [ ] 01-01-PLAN.md -- Bump action deps to node24-native versions, add FORCE flag to all workflows, run CI, and record baseline results
 
 ### Phase 2: Configuration and Type System
 
