@@ -1,19 +1,16 @@
 ---
 phase: 03-source-fixes-and-build
 verified: 2026-03-17T19:52:00Z
-status: human_needed
-score: 7/8 must-haves verified
-human_verification:
-  - test: 'Push branch and verify CI on all 3 OS runners passes for the current HEAD (commit 19f1bad)'
-    expected: 'Test, Test Integration, and Check Formatting workflows all pass on ubuntu-latest, macos-latest, and windows-latest'
-    why_human: 'CI runs visible in gh CLI are triggered by earlier commits. The branch is fully pushed (git status clean, up to date with origin), but verifying CI green specifically for the latest commit with the rebuilt dist/ requires checking the GitHub Actions run list against commit 19f1bad.'
+status: passed
+score: 8/8 must-haves verified
+human_verification: []
 ---
 
 # Phase 3: Source Fixes and Build Verification Report
 
 **Phase Goal:** Audit Node.js built-in API usage for Node.js 24 compatibility, upgrade @actions/\* dependencies to ESM-only 3.x/9.x versions, rebuild dist/ artifact, and confirm CI green on all platforms.
 **Verified:** 2026-03-17T19:52:00Z
-**Status:** human_needed
+**Status:** passed
 **Re-verification:** No -- initial verification
 
 ---
@@ -22,18 +19,18 @@ human_verification:
 
 ### Observable Truths
 
-| #   | Truth                                                                                   | Status      | Evidence                                                                                                                                                                                                                                                                |
-| --- | --------------------------------------------------------------------------------------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1   | All Node.js built-in API usage in nx-set-shas.ts is audited with Node.js 24 status      | ✓ VERIFIED  | 03-AUDIT.md table covers spawnSync, existsSync, process.chdir, process.stdout.write, process.env                                                                                                                                                                        |
-| 2   | All Node.js built-in API usage in tools/pre-commit.ts is audited with Node.js 24 status | ✓ VERIFIED  | 03-AUDIT.md table covers execSync, process.exit, process.env                                                                                                                                                                                                            |
-| 3   | Audit findings documented in structured checklist table                                 | ✓ VERIFIED  | 03-AUDIT.md contains two markdown tables, summary section, and out-of-scope items                                                                                                                                                                                       |
-| 4   | @actions/core upgraded to 3.x and @actions/github upgraded to 9.x                       | ✓ VERIFIED  | package.json: "^3.0.0" / "^9.0.0"; bun.lock: @actions/core@3.0.0 and @actions/github@9.0.0                                                                                                                                                                              |
-| 5   | tsc --noEmit passes after the dependency upgrade                                        | ✓ VERIFIED  | skipLibCheck added for octokit internal type conflicts; SUMMARY confirms zero errors; CI passes                                                                                                                                                                         |
-| 6   | dist/nx-set-shas.js is rebuilt with the upgraded @actions/\* ESM dependencies           | ✓ VERIFIED  | dist/nx-set-shas.js is 22,190 lines; contains 9 @actions/core refs and 6 @actions/github refs                                                                                                                                                                           |
-| 7   | The built artifact reflects all source and dependency changes                           | ✓ VERIFIED  | Commit 54af1c8 includes dist/nx-set-shas.js, package.json, bun.lock, tsconfig.json atomically                                                                                                                                                                           |
-| 8   | CI passes on all 3 OS matrix runners (ubuntu, macos, windows)                           | ? UNCERTAIN | Runs 23213406625 and 23213406626 (triggered by commit 19f1bad) show all 3 OS runners green -- but the dist rebuild was in 54af1c8 (pre-commit hook). The latest push runs cover a docs-only commit. CI for the actual dist rebuild at 54af1c8 needs human confirmation. |
+| #   | Truth                                                                                   | Status     | Evidence                                                                                                                                                                                                                                                                                                |
+| --- | --------------------------------------------------------------------------------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1   | All Node.js built-in API usage in nx-set-shas.ts is audited with Node.js 24 status      | ✓ VERIFIED | 03-AUDIT.md table covers spawnSync, existsSync, process.chdir, process.stdout.write, process.env                                                                                                                                                                                                        |
+| 2   | All Node.js built-in API usage in tools/pre-commit.ts is audited with Node.js 24 status | ✓ VERIFIED | 03-AUDIT.md table covers execSync, process.exit, process.env                                                                                                                                                                                                                                            |
+| 3   | Audit findings documented in structured checklist table                                 | ✓ VERIFIED | 03-AUDIT.md contains two markdown tables, summary section, and out-of-scope items                                                                                                                                                                                                                       |
+| 4   | @actions/core upgraded to 3.x and @actions/github upgraded to 9.x                       | ✓ VERIFIED | package.json: "^3.0.0" / "^9.0.0"; bun.lock: @actions/core@3.0.0 and @actions/github@9.0.0                                                                                                                                                                                                              |
+| 5   | tsc --noEmit passes after the dependency upgrade                                        | ✓ VERIFIED | skipLibCheck added for octokit internal type conflicts; SUMMARY confirms zero errors; CI passes                                                                                                                                                                                                         |
+| 6   | dist/nx-set-shas.js is rebuilt with the upgraded @actions/\* ESM dependencies           | ✓ VERIFIED | dist/nx-set-shas.js is 22,190 lines; contains 9 @actions/core refs and 6 @actions/github refs                                                                                                                                                                                                           |
+| 7   | The built artifact reflects all source and dependency changes                           | ✓ VERIFIED | Commit 54af1c8 includes dist/nx-set-shas.js, package.json, bun.lock, tsconfig.json atomically                                                                                                                                                                                                           |
+| 8   | CI passes on all 3 OS matrix runners (ubuntu, macos, windows)                           | ✓ VERIFIED | Phase 04 CI evidence confirms CI green on all 3 OS runners. Runs 23217767054 (Test) and 23217767087 (Test Integration) on feat/node24-runtime concluded success on ubuntu, macOS, and Windows. Branch includes dist/ rebuild from 54af1c8 and all subsequent commits. Phase 03 CI uncertainty resolved. |
 
-**Score:** 7/8 truths verified (1 uncertain -- CI coverage requires human review)
+**Score:** 8/8 truths verified
 
 ---
 
@@ -109,15 +106,7 @@ No TODO/FIXME/placeholder comments or empty implementations found in any phase a
 
 ### Human Verification Required
 
-#### 1. CI Green Confirmation for dist/ Rebuild Commit
-
-**Test:** Check GitHub Actions for the push run triggered by commit `54af1c8` ("feat(03): bump @actions/core to 3.x and @actions/github to 9.x") on the branch `LayZeeDK/feat/migrate-to-node24-runtime`.
-
-**Expected:** Test (ubuntu, macos, windows) and Test Integration (ubuntu, macos, windows) all show "completed success" for that commit or any subsequent commit that includes the rebuilt dist/nx-set-shas.js.
-
-**Why human:** The most recent push CI run visible (runs 23213406625 / 23213406626) was triggered by commit `19f1bad` (a docs-only commit). The dist rebuild happened in `54af1c8`. While subsequent CI runs on the same branch pass (confirming the branch as a whole is healthy), explicit confirmation that CI did not regress when `dist/nx-set-shas.js` changed requires a human to cross-reference the run timestamps against the commit timeline on GitHub Actions.
-
-Note: The gh CLI output shows the most recent runs are all "completed success" on all 3 OS platforms. Given the branch is clean and the most recent push CI covers the current HEAD which includes all phase changes, CI confirmation is effectively available -- but the SUMMARY documents this as "deferred: sandbox restriction on git push," so human sign-off is appropriate.
+No human verification required. Phase 04 CI evidence resolved the uncertainty documented during initial verification.
 
 ---
 
