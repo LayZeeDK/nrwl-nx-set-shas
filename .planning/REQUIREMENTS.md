@@ -20,8 +20,8 @@ Requirements for this migration. Each maps to roadmap phases.
 
 ### Type System
 
-- [ ] **TYPE-01**: Update `@types/node` from 20.x to 24.x
-- [ ] **TYPE-02**: Fix all TypeScript compilation errors surfaced by `@types/node` 24.x (e.g., `catch (e)` clause typing)
+- [x] **TYPE-01**: Update `@types/node` from 20.x to 24.x
+- [x] **TYPE-02**: Fix all TypeScript compilation errors surfaced by `@types/node` 24.x (e.g., `catch (e)` clause typing)
 
 ### Source Code Audit
 
@@ -81,8 +81,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | RUNT-03     | Phase 2 | Complete |
 | TSCO-01     | Phase 2 | Complete |
 | TSCO-02     | Phase 2 | Complete |
-| TYPE-01     | Phase 2 | Pending  |
-| TYPE-02     | Phase 2 | Pending  |
+| TYPE-01     | Phase 2 | Complete |
+| TYPE-02     | Phase 2 | Complete |
 | AUDT-01     | Phase 3 | Pending  |
 | AUDT-02     | Phase 3 | Pending  |
 | AUDT-03     | Phase 3 | Pending  |
