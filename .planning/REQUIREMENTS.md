@@ -74,33 +74,33 @@ Deferred to future work. Not in current migration scope.
 
 Which phases cover which requirements. Updated during roadmap creation.
 
-| Requirement | Phase | Status  |
-| ----------- | ----- | ------- |
-| RUNT-01     | TBD   | Pending |
-| RUNT-02     | TBD   | Pending |
-| RUNT-03     | TBD   | Pending |
-| TSCO-01     | TBD   | Pending |
-| TSCO-02     | TBD   | Pending |
-| TYPE-01     | TBD   | Pending |
-| TYPE-02     | TBD   | Pending |
-| AUDT-01     | TBD   | Pending |
-| AUDT-02     | TBD   | Pending |
-| AUDT-03     | TBD   | Pending |
-| BVAL-01     | TBD   | Pending |
-| BVAL-02     | TBD   | Pending |
-| BVAL-03     | TBD   | Pending |
-| RLSE-01     | TBD   | Pending |
-| RLSE-02     | TBD   | Pending |
-| RLSE-03     | TBD   | Pending |
-| RLSE-04     | TBD   | Pending |
+| Requirement | Phase   | Status  |
+| ----------- | ------- | ------- |
+| RUNT-01     | Phase 2 | Pending |
+| RUNT-02     | Phase 2 | Pending |
+| RUNT-03     | Phase 2 | Pending |
+| TSCO-01     | Phase 2 | Pending |
+| TSCO-02     | Phase 2 | Pending |
+| TYPE-01     | Phase 2 | Pending |
+| TYPE-02     | Phase 2 | Pending |
+| AUDT-01     | Phase 3 | Pending |
+| AUDT-02     | Phase 3 | Pending |
+| AUDT-03     | Phase 3 | Pending |
+| BVAL-01     | Phase 3 | Pending |
+| BVAL-02     | Phase 1 | Pending |
+| BVAL-03     | Phase 1 | Pending |
+| RLSE-01     | Phase 4 | Pending |
+| RLSE-02     | Phase 4 | Pending |
+| RLSE-03     | Phase 4 | Pending |
+| RLSE-04     | Phase 4 | Pending |
 
 **Coverage:**
 
 - v1 requirements: 17 total
-- Mapped to phases: 0
-- Unmapped: 17
+- Mapped to phases: 17
+- Unmapped: 0
 
 ---
 
 _Requirements defined: 2026-03-17_
-_Last updated: 2026-03-17 after initial definition_
+_Last updated: 2026-03-17 after roadmap creation_
