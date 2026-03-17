@@ -31,7 +31,7 @@ Requirements for this migration. Each maps to roadmap phases.
 
 ### Build & Validation
 
-- [ ] **BVAL-01**: Rebuild `dist/nx-set-shas.js` with Bun targeting Node.js 24
+- [x] **BVAL-01**: Rebuild `dist/nx-set-shas.js` with Bun targeting Node.js 24
 - [ ] **BVAL-02**: All existing CI tests pass on Node.js 24 runtime
 - [ ] **BVAL-03**: Validate action works end-to-end with `FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true`
 
@@ -86,7 +86,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | AUDT-01     | Phase 3 | Complete |
 | AUDT-02     | Phase 3 | Complete |
 | AUDT-03     | Phase 3 | Complete |
-| BVAL-01     | Phase 3 | Pending  |
+| BVAL-01     | Phase 3 | Complete |
 | BVAL-02     | Phase 1 | Done     |
 | BVAL-03     | Phase 1 | Done     |
 | RLSE-01     | Phase 4 | Pending  |
