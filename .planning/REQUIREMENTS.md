@@ -9,14 +9,14 @@ Requirements for this migration. Each maps to roadmap phases.
 
 ### Runtime Configuration
 
-- [ ] **RUNT-01**: Update `action.yml` runtime declaration from `node20` to `node24`
-- [ ] **RUNT-02**: Update Volta Node.js pin in `package.json` to Node.js 24.x
-- [ ] **RUNT-03**: Update `engines.node` in `package.json` to require Node.js >= 24
+- [x] **RUNT-01**: Update `action.yml` runtime declaration from `node20` to `node24`
+- [x] **RUNT-02**: Update Volta Node.js pin in `package.json` to Node.js 24.x
+- [x] **RUNT-03**: Update `engines.node` in `package.json` to require Node.js >= 24
 
 ### TypeScript Configuration
 
-- [ ] **TSCO-01**: Update `tsconfig.json` `target` per TypeScript Node Target Mapping for Node.js 24
-- [ ] **TSCO-02**: Update `tsconfig.json` `lib` per TypeScript Node Target Mapping for Node.js 24
+- [x] **TSCO-01**: Update `tsconfig.json` `target` per TypeScript Node Target Mapping for Node.js 24
+- [x] **TSCO-02**: Update `tsconfig.json` `lib` per TypeScript Node Target Mapping for Node.js 24
 
 ### Type System
 
@@ -74,25 +74,25 @@ Deferred to future work. Not in current migration scope.
 
 Which phases cover which requirements. Updated during roadmap creation.
 
-| Requirement | Phase   | Status  |
-| ----------- | ------- | ------- |
-| RUNT-01     | Phase 2 | Pending |
-| RUNT-02     | Phase 2 | Pending |
-| RUNT-03     | Phase 2 | Pending |
-| TSCO-01     | Phase 2 | Pending |
-| TSCO-02     | Phase 2 | Pending |
-| TYPE-01     | Phase 2 | Pending |
-| TYPE-02     | Phase 2 | Pending |
-| AUDT-01     | Phase 3 | Pending |
-| AUDT-02     | Phase 3 | Pending |
-| AUDT-03     | Phase 3 | Pending |
-| BVAL-01     | Phase 3 | Pending |
-| BVAL-02     | Phase 1 | Done    |
-| BVAL-03     | Phase 1 | Done    |
-| RLSE-01     | Phase 4 | Pending |
-| RLSE-02     | Phase 4 | Pending |
-| RLSE-03     | Phase 4 | Pending |
-| RLSE-04     | Phase 4 | Pending |
+| Requirement | Phase   | Status   |
+| ----------- | ------- | -------- |
+| RUNT-01     | Phase 2 | Complete |
+| RUNT-02     | Phase 2 | Complete |
+| RUNT-03     | Phase 2 | Complete |
+| TSCO-01     | Phase 2 | Complete |
+| TSCO-02     | Phase 2 | Complete |
+| TYPE-01     | Phase 2 | Pending  |
+| TYPE-02     | Phase 2 | Pending  |
+| AUDT-01     | Phase 3 | Pending  |
+| AUDT-02     | Phase 3 | Pending  |
+| AUDT-03     | Phase 3 | Pending  |
+| BVAL-01     | Phase 3 | Pending  |
+| BVAL-02     | Phase 1 | Done     |
+| BVAL-03     | Phase 1 | Done     |
+| RLSE-01     | Phase 4 | Pending  |
+| RLSE-02     | Phase 4 | Pending  |
+| RLSE-03     | Phase 4 | Pending  |
+| RLSE-04     | Phase 4 | Pending  |
 
 **Coverage:**
 
