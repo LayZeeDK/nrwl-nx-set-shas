@@ -46,12 +46,12 @@ Plans:
 2. `package.json` Volta pin and engines field require Node.js 24
 3. `tsconfig.json` target and lib match the TypeScript Node Target Mapping for Node.js 24
 4. `@types/node` is at 24.x and `tsc --noEmit` either passes clean or surfaces only known fixable errors
-   **Plans**: TBD
+   **Plans**: 2 plans
 
 Plans:
 
-- [ ] 02-01: Update runtime declaration and toolchain configuration
-- [ ] 02-02: Update type system and resolve compilation
+- [ ] 02-01-PLAN.md -- Update runtime declaration (action.yml node24), toolchain config (package.json, tsconfig.json), and remove FORCE flag from all 5 CI workflows
+- [ ] 02-02-PLAN.md -- Bump @types/node to 24.x, update lockfile, and verify tsc --noEmit produces no new errors
 
 ### Phase 3: Source Fixes and Build
 
