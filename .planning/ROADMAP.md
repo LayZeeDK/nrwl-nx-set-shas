@@ -13,7 +13,7 @@ Migrate the nrwl/nx-set-shas GitHub Action from the deprecated Node.js 20 runtim
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Baseline Validation** - Verify current action behavior on Node.js 24 before making changes
+- [x] **Phase 1: Baseline Validation** - Verify current action behavior on Node.js 24 before making changes
 - [ ] **Phase 2: Configuration and Type System** - Update runtime declaration, type definitions, and toolchain config for Node.js 24
 - [ ] **Phase 3: Source Fixes and Build** - Fix compiler-surfaced issues and rebuild dist/ artifact
 - [ ] **Phase 4: Version Bump and Release PR** - Bump to v5.0.0 and submit PR to upstream
@@ -33,7 +33,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 Plans:
 
-- [ ] 01-01-PLAN.md -- Bump action deps to node24-native versions, add FORCE flag to all workflows, run CI, and record baseline results
+- [x] 01-01-PLAN.md -- Bump action deps to node24-native versions, add FORCE flag to all workflows, run CI, and record baseline results
 
 ### Phase 2: Configuration and Type System
 
@@ -93,9 +93,9 @@ Plans:
 **Execution Order:**
 Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 
-| Phase                            | Plans Complete | Status      | Completed |
-| -------------------------------- | -------------- | ----------- | --------- |
-| 1. Baseline Validation           | 0/1            | Not started | -         |
-| 2. Configuration and Type System | 0/2            | Not started | -         |
-| 3. Source Fixes and Build        | 0/2            | Not started | -         |
-| 4. Version Bump and Release PR   | 0/1            | Not started | -         |
+| Phase                            | Plans Complete | Status      | Completed  |
+| -------------------------------- | -------------- | ----------- | ---------- |
+| 1. Baseline Validation           | 1/1            | Complete    | 2026-03-17 |
+| 2. Configuration and Type System | 0/2            | Not started | -          |
+| 3. Source Fixes and Build        | 0/2            | Not started | -          |
+| 4. Version Bump and Release PR   | 0/1            | Not started | -          |

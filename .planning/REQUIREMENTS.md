@@ -87,8 +87,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | AUDT-02     | Phase 3 | Pending |
 | AUDT-03     | Phase 3 | Pending |
 | BVAL-01     | Phase 3 | Pending |
-| BVAL-02     | Phase 1 | Pending |
-| BVAL-03     | Phase 1 | Pending |
+| BVAL-02     | Phase 1 | Done    |
+| BVAL-03     | Phase 1 | Done    |
 | RLSE-01     | Phase 4 | Pending |
 | RLSE-02     | Phase 4 | Pending |
 | RLSE-03     | Phase 4 | Pending |
