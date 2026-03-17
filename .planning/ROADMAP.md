@@ -17,6 +17,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 2: Configuration and Type System** - Update runtime declaration, type definitions, and toolchain config for Node.js 24
 - [x] **Phase 3: Source Fixes and Build** - Fix compiler-surfaced issues and rebuild dist/ artifact
 - [x] **Phase 4: Version Bump and Release PR** - Bump to v5.0.0 and submit PR to upstream
+- [ ] **Phase 5: Audit Documentation Closure** - Write missing verification docs, fix accuracy gaps, and sign off all Nyquist VALIDATION.md files
 
 ## Phase Details
 
@@ -88,10 +89,29 @@ Plans:
 
 - [x] 04-01-PLAN.md -- Create clean branch from upstream/main, cherry-pick 4 migration commits, bump version to 5.0.0, verify CI, and open upstream PR
 
+### Phase 5: Audit Documentation Closure
+
+**Goal**: Close all documentation gaps identified by the v5.0 milestone audit so BVAL-02 and BVAL-03 are fully verified, REQUIREMENTS.md checkboxes are accurate, VERIFICATION.md files are corrected, and all VALIDATION.md files are signed off
+**Depends on**: Phase 4
+**Requirements**: BVAL-02, BVAL-03
+**Gap Closure**: Closes gaps from v5.0-MILESTONE-AUDIT.md
+**Success Criteria** (what must be TRUE):
+
+1. `01-VERIFICATION.md` exists and formally documents CI baseline results for BVAL-02 and BVAL-03
+2. REQUIREMENTS.md checkboxes for BVAL-02 and BVAL-03 are `[x]`
+3. Phase 03 VERIFICATION.md status is corrected from `human_needed` to `passed`
+4. Phase 04 VERIFICATION.md commit count is corrected to 5 commits above upstream
+5. All 4 VALIDATION.md files have `nyquist_compliant: true` and `wave_0_complete: true`
+   **Plans**: 1 plan
+
+Plans:
+
+- [ ] 05-01-PLAN.md -- Write Phase 01 VERIFICATION.md, fix VERIFICATION.md accuracy gaps in phases 03 and 04, update REQUIREMENTS.md checkboxes, and sign off all 4 VALIDATION.md files
+
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 -> 2 -> 3 -> 4
+Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 
 | Phase                            | Plans Complete | Status   | Completed  |
 | -------------------------------- | -------------- | -------- | ---------- |
@@ -99,3 +119,4 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 | 2. Configuration and Type System | 2/2            | Complete | 2026-03-17 |
 | 3. Source Fixes and Build        | 2/2            | Complete | 2026-03-17 |
 | 4. Version Bump and Release PR   | 1/1            | Complete | 2026-03-17 |
+| 5. Audit Documentation Closure   | 0/1            | Pending  |            |
